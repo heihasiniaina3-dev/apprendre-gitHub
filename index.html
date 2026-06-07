@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Master Quest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <section id="start-screen" class="screen-start">
+            <div class="logo-area">
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <h1>Git & GitHub Master Quest</h1>
+            <p class="subtitle">Traversez 4 niveaux d'entraînement intensif, maîtrisez le terminal et devenez un as de la collaboration décentralisée.</p>
+            
+            <div class="form-start">
+                <div class="input-group">
+                    <i class="fa-solid fa-user-ninja"></i>
+                    <input type="text" id="username" class="username-input" placeholder="Entrez votre pseudo de dev..." maxlength="15" autocomplete="off" required>
+                </div>
+                <button id="btn-start" class="btn-primary" type="button">Initialiser la Quête <i class="fa-solid fa-play"></i></button>
+            </div>
+
+            <div class="levels-preview">
+                <span class="preview-badge"><i class="fa-solid fa-terminal"></i> Niv 1: Commandes de base</span>
+                <span class="preview-badge"><i class="fa-solid fa-clock-rotate-left"></i> Niv 2: Gestion d'Historique</span>
+                <span class="preview-badge"><i class="fa-solid fa-code-fork"></i> Niv 3: Branchement</span>
+                <span class="preview-badge"><i class="fa-solid fa-cloud-arrow-up"></i> Niv 4: GitHub & Sync</span>
+            </div>
+        </section>
+
+        <section id="game-screen" class="screen-game hidden">
+            <div class="game-header">
+                <span id="display-level" class="level-badge">NIVEAU 1</span>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <i class="fa-solid fa-user"></i> <strong id="player-name">Dev</strong>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-bolt" style="color:var(--accent-yellow)"></i> Score: <strong id="display-score">0</strong> XP
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span>Avancement du niveau</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div id="progress-fill" class="progress-bar-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <div id="question-category" class="question-category">INITIATION</div>
+                <h2 id="question-text" class="question-title">La question se chargera ici...</h2>
+            </div>
+
+            <div id="options-container" class="options-grid">
+                </div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="t-dot red"></span>
+                        <span class="t-dot yellow"></span>
+                        <span class="t-dot green"></span>
+                    </div>
+                    <span class="terminal-title">bash - git@github:~/workspace</span>
+                    <div></div>
+                </div>
+                <div id="terminal-body" class="terminal-body">
+                    </div>
+            </div>
+        </section>
+
+        <section id="end-screen" class="screen-end hidden">
+            <div class="trophy-icon">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h1 id="end-title">Félicitations, GitMaster !</h1>
+            <p class="subtitle">Votre formation est un succès. Voici l'évaluation du système.</p>
+            
+            <div class="rank-card">
+                <span>Grade attribué :</span>
+                <span id="rank-name" class="rank-title">HACKER DES BRANCHES</span>
+                <span id="final-stats" style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Score total : 0 XP</span>
+            </div>
+
+            <button id="btn-restart" class="btn-primary" style="max-width: 250px;">Recommencer la simulation</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
